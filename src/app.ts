@@ -16,12 +16,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const tweet = require("./routes/tweet/index");
 app.use("/api/", tweet);
 
-// app.use((req: any, res: any, next: any) => {
-//   res.status(404);
+app.use((req: any, res: any, next: any) => {
+  res.status(404);
 
-//   res.send({ error: "Not found any route" });
-//   return;
-// });
+  res.send({ error: "Not found any route" });
+  return;
+});
 
 // start the Express server
 app.listen({
