@@ -23,7 +23,7 @@ app.use((req: any, res: any, next: any) => {
   return;
 });
 
-// start the Express server
+
 app.listen({
   port: process.env.PORT || 3333,
   hostname: process.env.YOUR_HOST || "0.0.0.0",
